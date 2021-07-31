@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: grid; 
+    place-items: center; /* sayfayı ortalama için*/
+    background-color: #ff5e57;
+}
+
+.container{
+    width: 280px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.review__section{ /*bu class'a ait iki div var, bunları yanyana dizdim*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.review__section:last-child{
+    font-size: 30px;
+    color: #c8c8c8;
+}
+
+.review__emoji.animate {
+    animation: hopla 0.5s linear forwards;
+}
+
+.reviewStars span {
+    cursor: pointer;
+}
+
+@keyframes hopla { /*review emoji'nin hopla animasyonunu burada tanımlıyorum*/
+    0% {
+        transform: scale(1); /* boyutu %100 */
+    }
+    50% {
+        transform: scale(1.4); /* boyutu %140 */
+    }
+    100% {
+        transform: scale(1); /* boyutu yeniden %100 */
+    }
+    }
+}
+
+.review__title {
+    color: #c8c8c8;
+}
+
+.review__title.animate{ /* .review__title animate class'ı olsa bu çalışır. ama bunu JS ile çalıştıracağım*/
+    animation: yukari_kay 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes yukari_kay { /*review title'ın yukari_kay animasyonunu burada tanımlıyorum*/
+    0% {
+        opacity: 0;                 /* görünmez ve 20 px y ekseninde aşağı kaydır*/
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;                 /* görünür ve başlangıç pozisyonuna getir*/
+        transform: translateY(0px);
+    }
+}
+
+.git{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+button{
+    font-size: 1rem;
+    padding: 5px;
+    background-color: black;
+    color:white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: -1px 3px 10px 1px #000000;
+}
