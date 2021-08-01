@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 emoji.classList.add("animate"); // css animate class'ını ekle ve animasyonu çalıştır.
 
                 if(rating <= 2 && rating > 0) { // click'lenen span'ın value'su için
-                    title.innerHTML = "bed"; // başlık yazısını değiştir
+                    title.innerHTML = "bad"; // başlık yazısını değiştir
                     emoji.innerHTML = "&#128545"; // emoji'yi değiştir
                 }else if(rating <= 4 && rating > 2) {
                     title.innerHTML = "good"; // başlık yazısını değiştir
