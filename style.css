@@ -46,7 +46,7 @@ body{
     100% {
         transform: scale(1); /* boyutu yeniden %100 */
     }
-    }
+    
 }
 
 .review__title {
