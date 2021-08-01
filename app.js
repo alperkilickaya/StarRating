@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let stars = document.querySelectorAll(".reviewStars span"); // yıldız ikonları
+    let stars = document.querySelectorAll(".reviewStars span"); // yıldız ikonları. 5 elemanı olan array'dir.
     stars.forEach(item => { // herbir span için
         item.addEventListener('click', function(){ // click event'i ekle ve aşağıdakileri uygula
 
@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             setTimeout(() => { // gecikme ver
 
-                title.classList.add("animate"); // css animate class'ını ekle ve animasyonu çalıştır.
-                emoji.classList.add("animate"); // css animate class'ını ekle ve animasyonu çalıştır.
+                title.classList.add("animate"); // css animate class'ını ekler ve animasyon çalışır
+                emoji.classList.add("animate"); // css animate class'ını ekler ve animasyon çalışır.
 
-                if(rating <= 2 && rating > 0) { // click'lenen span'ın value'su için
+                if(rating <= 2 && rating > 0) { // click'lenen span'ın value'su için;
                     title.innerHTML = "bad"; // başlık yazısını değiştir
                     emoji.innerHTML = "&#128545"; // emoji'yi değiştir
                 }else if(rating <= 4 && rating > 2) {
@@ -37,11 +37,11 @@ function SetRatingStar(rating, stars){
     let len = stars.length; // stars; spanları tutan array ve uzunluğu 5
   
     for(var i = 0; i < len; i++){
-        if(i<rating){ // tıkladığım span'ın value değerine kadar döngüyü çalıştır ve bunu yap
+        if(i<rating){ // döngünün tıkladığım span'ın value değerine kadar olan kısmı için bunu yap
             
             stars[i].style.color = '#ffd32a'; // value değerine kadar olan span elemenlerinin rengini değiştir.
 
-        }else{ // geri kalan spanlara da bunu yap. yani eski halinde kalsınlar. Eğer bu yapılmazsa 4 yıldızdan sonra 3 yıldız 
+        }else{ // döngüde geri kalan spanlara da bunu yap. yani eski halini uygula. Eğer bu yapılmazsa 4 yıldızdan sonra 3 yıldız 
                 // verilirse 4.span yine sarı renkte kalır. ilk haline dönmez.
            
             stars[i].style.color = '#c8c8c8';
